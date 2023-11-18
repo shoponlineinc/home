@@ -1,0 +1,492 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Online Help Center</title>
+  <link rel="icon" href="assets\Logo.jpg">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  
+  
+	        .window {
+            display: none;
+            position: fixed;
+            top: 30%;
+            left: 30%;
+            width: 30%;
+            height: 30%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .window-header {
+            display: flex;
+			align-text:center;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            width: auto;
+        }
+        .window-close {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+.window-close:hover {
+           transform: scale(2);
+        }
+
+        .window-content {
+            padding: 20px;
+            box-sizing: border-box;
+            border-top: 1px solid #ccc;
+            overflow-y: scroll;
+            text-align: left;
+            height: calc(100% - 70px);
+            user-select: none;
+        }
+
+	
+	
+	
+  .chatbot {
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .question {
+    background-color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+h2 {text-align:left}
+    p {text-align:center}
+
+  #popupButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  #popupButton img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+ #popupArrow {
+    position: absolute;
+    bottom: -12px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    transform: rotate(45deg);
+    border-left: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+  }
+
+  #popupContainerAuto {
+    position: absolute;
+    bottom: 70px;
+    left: 90px;
+    width: 200px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .button1 {
+      height: 50px;
+      width: 180px;
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      font-size: 20px;
+      border-radius: 12px;
+      transition-duration: 0.4s;
+    }
+
+    .button1:hover {
+      background-color: black;
+      color: white;
+transform: scale(1.2);
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+height:100px;
+margin-left:10px;
+margin-top:20px;
+width:95%;
+border: 5px solid black;
+      padding: 20px;
+border-radius:100px;
+  background-size: 100% 250px; 
+background-repeat:no-repeat;
+background-image: url('Logo.png');
+    }
+
+
+    header h1 {
+      font-size: 24px;
+color:black;
+margin-top:20px;
+      margin-bottom: 10px;
+    }
+
+
+.center2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+margin-top:30px;
+    }
+
+
+	
+.center5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+margin-top:30px;
+    }
+
+
+li:hover{
+transform: scale(1.4);
+    }
+
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+      font-size:18px
+    }
+
+    nav ul li a {
+      color: black;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .featured-products {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+    }
+
+    .product-cards-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .product-card {
+      flex: 0 0 calc(20% - 50px);
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      max-width: 200px;
+      margin-bottom: 20px;
+      margin-right: 40px;
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+    }
+.center1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    }
+
+h3 {
+      text-align: center
+}
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center}
+
+    .product-card h3 {
+      font-size: 18px;
+  margin-top: 10 px;
+}
+    }
+
+    .product-card p {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    .product-card a {
+      display: block;
+      text-align: center;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+
+
+  .answer {
+    font-family: "Gloucester MT";
+   font-size:25px;
+    display: none;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .question-arrow {
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+  }
+.center1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    }
+  .greeting {
+    margin-bottom: 10px;
+  }
+
+  .show-answer .question-arrow {
+    transform: rotate(180deg);
+  }
+</style>
+</head>
+<body>
+<header>
+
+
+<div class="center2">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html" target="_blank">Contact Us</a></li>
+</div>
+      </ul>
+    </nav>
+
+  </header>
+  <div class="chatbot">
+  <div class="greeting">
+<div class="center1">
+  <img src="assets/Logo.jpg" alt="Centered Image">
+</div>
+<br>
+👋 Welcome to Shop Online! We're excited to have you here.<br><br>
+
+Our Help Center is here to help you with any questions you might have about our products and services. Whether you're looking for information, assistance, or just want to say hello, we're here to assist you.<br>
+<br>
+Feel free to explore our offerings and let us know how we can make your experience even better.<br><br>
+
+Thanks for choosing Shop Online, and we're looking forward to serving you!
+<br><br>
+    <button class="changeTextButton" data-newtext="Our services are designed to provide comprehensive solutions tailored to our customers' specific needs. We focus on delivering tangible results that enhance efficiency, productivity, and overall success. By leveraging our expertise, clients can expect streamlined processes, optimized operations, and a significant competitive edge in their industry.! <br> <br>    <button class="changeTextButton" data-newtext=" 👋 Welcome to Shop Online! We're excited to have you here.<br><br>
+
+Our chatbot is here to help you with any questions you might have about our products and services. Whether you're looking for information, assistance, or just want to say hello, we're here to assist you.<br>
+<br>
+Feel free to explore our offerings and let us know how we can make your experience even better.<br><br>
+
+Thanks for choosing Shop Online, and we're looking forward to serving you!
+</div>
+    <div class="question">
+</div>
+    <div class="question">
+How Do Your Services Benefit Customers?
+      <div class="question-arrow"></div>
+    </div>
+    <div class="answer">
+      Our services are designed to 
+provide comprehensive solutions tailored to our customers' specific needs. 
+We focus on delivering tangible results that enhance efficiency, productivity, 
+and overall success. By leveraging our expertise, clients can expect streamlined 
+processes, optimized operations, and a significant competitive edge in their industry.!
+    </div>
+        <div class="question">
+What Makes Your Services Unique? 
+      <div class="question-arrow"></div>
+    </div>
+    <div class="answer">
+What distinguishes us is our
+ unwavering commitment to innovation and excellence. We emphasize a 
+forward-thinking approach, combining cutting-edge technology with a deep 
+understanding of industry trends. Our team's passion for creative problem-solving 
+ensures that each service we offer is not just a solution, but a transformational 
+experience that propels our clients toward their goals.
+    </div>
+        <div class="question">
+How Does the Ordering Process Work?
+      <div class="question-arrow"></div>
+    </div>
+    <div class="answer">
+Our ordering process is designed
+ for simplicity and convenience. To get started, visit our website and navigate to 
+the Home page. Choose the service that aligns with your needs and click the 
+'Get Started Now!' button. Kindly fill in the form, and after the time specified for 
+the service to be completed, you will receive a notification. The payment link will
+ be sent to you, and once payment is confirmed, you will receive the service directly.
+    </div>
+        <div class="question">
+How Can Customers Contact You?
+      <div class="question-arrow"></div>
+    </div>
+    <div class="answer">
+We value open communication
+ with our customers. To reach us, simply visit the Contact Us page on our website. We're here to assist you every step
+ of the way.
+    </div>
+        <div class="question">
+Are There Any Guarantees or Refund Policies?
+      <div class="question-arrow"></div>
+    </div>
+    <div class="answer">
+Currently, we do not offer
+ guarantees or refunds for our services. Our team is dedicated to delivering 
+high-quality solutions, and we work closely with our clients to ensure their satisfaction.
+ If you have any concerns or inquiries about our services, please feel free to reach 
+out to our support team. We're here to assist you in any way we can.
+    </div>
+        <div class="question">
+ Are There Any Special Offers or Discounts?
+      <div class="question-arrow"></div>
+    </div>
+    <div class="answer">
+We believe in rewarding our
+ valued clients. We regularly provide special offers and exclusive discounts to show
+ our appreciation for your continued support. Keep an eye on our website to stay
+ updated on upcoming promotions. These offers are our way of making our premium
+ services even more accessible to you.
+    </div>
+    
+        <div class="question">
+Other.....
+      <div class="question-arrow"></div>
+    </div>
+    <div class="answer">
+To contact us, and ask us about any questions you have or if you need any help, 
+<a href="contact.html" target="_blank">
+          <button class="button1">
+            <span>Click Here!</span>
+          </button>
+</a>
+		  </div>
+
+  </div>
+  <script>
+    const questions = document.querySelectorAll('.question');
+
+    questions.forEach(question => {
+      const arrow = question.querySelector('.question-arrow');
+      const answer = question.nextElementSibling;
+
+      question.addEventListener('click', () => {
+        question.classList.toggle('show-answer');
+        if (question.classList.contains('show-answer')) {
+          arrow.style.transform = 'rotate(180deg)';
+          answer.style.display = 'block';
+        } else {
+          arrow.style.transform = 'rotate(0deg)';
+          answer.style.display = 'none';
+        }
+      });
+    });
+  </script>
+  
+  
+  <div class="window" id="siked">
+    <div class="window-header">
+        <span class="window-close" id="sikedclose">&times;</span>
+        Not allowed
+    </div>
+    <div class="window-content">
+	<div class = "center5">
+<h2> Sorry, this is not allowed!</h2>
+</div>
+</div>
+</div>
+
+
+
+  <script>
+  
+      const sike = document.getElementById('siked');
+    const sikeclose = document.getElementById('sikedclose');
+	
+	
+    sikeclose.addEventListener('click', () => {
+        sike.style.display = 'none';
+    });
+
+  document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+        sike.style.display = 'block';
+});
+
+document.addEventListener("keydown", function (e) {
+  if (e.ctrlKey && e.shiftKey && e.key === "I") {
+    e.preventDefault();
+        sike.style.display = 'block';
+  }
+});
+
+  </script>
+
+</body>
+</html>
